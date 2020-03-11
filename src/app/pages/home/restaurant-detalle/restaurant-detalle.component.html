@@ -1,0 +1,37 @@
+<StackLayout>
+    <StackLayout height="200" [backgroundImage]="restaurant.thumb" style="background-position: center; background-size: cover; background-repeat: no-repeat;">
+        <StackLayout height="100%" style="background-color: rgba(0, 0, 0, 0.4)">
+            <Label class="fas" text="&#xf060;" (tap)="onBack()" style="color: white; font-size: 30;padding-top:40;padding-left:10;"></Label>
+            <Label class="title" [text]="restaurant.name" textWrap="true"></Label>
+        </StackLayout>
+    </StackLayout>
+    <StackLayout>
+        <Label class="title-detalle-description" text="Ubicación" textWrap="true"></Label>
+    </StackLayout>
+
+    <ContentView height="20%" width="100%">
+        <Mapbox accessToken="pk.eyJ1IjoiYnJpYW4xMjU4NjUiLCJhIjoiY2s3bDUwaXR2MDNiazNsanI2eDA1eXcxeCJ9.n8wznVpfB_LfDnIg4P04gg" [latitude]="restaurant.location.latitude" [longitude]="restaurant.location.longitude" zoomLevel="13" (mapReady)="onMapReady($event, restaurant)">
+        </Mapbox>
+    </ContentView>
+    <StackLayout>
+        <Label class="title-detalle-description" text="Contacto" textWrap="true"></Label>
+        <StackLayout paddingLeft="12">
+            <WrapLayout orientation="horizontal" paddingTop="5" paddingBottom="5">
+                <Label text="Teléfono" width="50%" style="color:#c5c5c5;font-weight: bold;font-size:14;"></Label>
+                <Label [text]="restaurant.phone_numbers" width="50%" style="color:#b6d4d4;font-weight: bold;"></Label>
+            </WrapLayout>
+            <WrapLayout orientation="horizontal" paddingTop="5" paddingBottom="5">
+                <Label text="Categoría" width="50%" style="color:#c5c5c5;font-weight: bold;font-size:14"></Label>
+                <Label [text]="restaurant.cuisines" width="50%" textWrap="true" style="color:#b6d4d4;font-weight: bold;font-size:14"></Label>
+            </WrapLayout>
+            <WrapLayout orientation="horizontal" paddingTop="5" paddingBottom="5">
+                <Label text="Precio Promedio" width="50%" style="color:#c5c5c5;font-weight: bold;font-size:14"></Label>
+                <Label text="{{restaurant.currency}} {{restaurant.average_cost_for_two}}" width="50%" style="color:#b6d4d4;font-weight: bold;font-size:14"></Label>
+            </WrapLayout>
+            <WrapLayout orientation="horizontal" paddingTop="5" paddingBottom="5">
+                <Label text="Fotos" width="50%" style="color:#c5c5c5;font-weight: bold;font-size:14"></Label>
+                <Label text="{{restaurant.currency}} {{restaurant.average_cost_for_two}}" width="50%" style="color:#b6d4d4;font-weight: bold;font-size:14"></Label>
+            </WrapLayout>
+        </StackLayout>
+    </StackLayout>
+</StackLayout>

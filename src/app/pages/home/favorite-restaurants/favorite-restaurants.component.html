@@ -1,0 +1,18 @@
+<ns-bottom-bar index="2">
+    <ScrollView>
+        <StackLayout>
+            <Label text="Lista de Restaurantes favoritos" fontSize="17" fontWeight="bold" paddingTop="40" paddingLeft="12"></Label>
+            <CardView *ngFor="let item of favoriteRestaurants" class="card-list" elevation="20" radius="10" ios:shadowRadius="3">
+                <StackLayout class="card-list-layout">
+                    <GridLayout columns="*,2*" rows="2*,3*" width="100%">
+                        <Image [src]="item.collection.image_url" height="100" stretch="fill" col="0" row="0"></Image>
+                        <StackLayout col="1" row="0" paddingTop="25" paddingLeft="10">
+                            <Label [text]="item.collection.title" fontSize="14" fontWeight="bold"></Label>
+                            <Label textWrap="true" [text]="item.collection.description"></Label>
+                        </StackLayout>
+                    </GridLayout>
+                </StackLayout>
+            </CardView>
+        </StackLayout>
+    </ScrollView>
+</ns-bottom-bar>

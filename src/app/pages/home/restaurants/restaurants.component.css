@@ -1,0 +1,31 @@
+/* Add mobile styles for the component here.  */
+
+.img-principal-carousel {
+    background-image: url("https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card {
+    background-color: #fff;
+    color: #4d4d4d;
+    margin: 8;
+    width: 200;
+}
+
+.title-card {
+    font-weight: bold;
+    font-size: 16;
+}
+
+.description-card {
+    color: #c5c5c5;
+    font-size: 14;
+    font-weight: bold;
+}
+
+.title-home {
+    font-size: 17;
+    font-weight: bold;
+    padding: 10;
+}

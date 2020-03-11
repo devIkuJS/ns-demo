@@ -1,0 +1,24 @@
+<ns-bottom-bar index="0">
+    <GridLayout rows="250, *" class="fondo">
+        <StackLayout row="0" backgroundColor="black">
+            <Image src="https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></Image>
+        </StackLayout>
+
+        <StackLayout row="1">
+            <Label text="Lista de restaurants" class="title-home"></Label>
+            <ScrollView orientation="horizontal">
+                <StackLayout orientation="horizontal" height="280">
+                    <CardView *ngFor="let item of listRestaurants" class="card" elevation="40" radius="5" ios:shadowRadius="3" (tap)="onNavigateDetalle(item)">
+                        <StackLayout>
+                            <Image [src]="item.restaurant.thumb" height="150" stretch="fill"></Image>
+                            <StackLayout padding="5">
+                                <Label class="title-card" textWrap="true" [text]="item.restaurant.name"></Label>
+                                <Label class="description-card" textWrap="true" [text]="item.restaurant.location.locality_verbose"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </CardView>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </GridLayout>
+</ns-bottom-bar>

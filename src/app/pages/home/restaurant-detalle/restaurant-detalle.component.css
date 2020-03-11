@@ -1,0 +1,15 @@
+/* Add mobile styles for the component here.  */
+
+.title {
+    font-size: 32;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.title-detalle-description {
+    font-size: 18;
+    color: black;
+    font-weight: bold;
+    padding: 10 12;
+}

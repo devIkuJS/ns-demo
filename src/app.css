@@ -1,0 +1,75 @@
+@import "~@nativescript/theme/css/core.css";
+@import "~@nativescript/theme/css/default.css";
+
+/* Place any CSS rules you want to apply on both iOS and Android here.
+This is where the vast majority of your CSS code goes. */
+
+.fa-brands {
+    font-family: "Font Awesome 5 Brands", "fa-brands-400";
+}
+
+.far {
+    font-family: "Font Awesome 5 Free", "fa-regular-400";
+    font-weight: 400;
+}
+
+.fas {
+    font-family: "Font Awesome 5 Free", "fa-solid-900";
+    font-weight: 900;
+}
+
+.title-login {
+    color: #000;
+    font-size: 35;
+    font-weight: bold;
+    text-align: center;
+}
+
+.subtitle-login {
+    color: #b5b5b7;
+    text-align: center;
+    font-size: 18;
+    font-weight: bold;
+    margin-top: 10;
+}
+
+.label-forgot-password {
+    text-align: right;
+    color: #b6d4d4;
+    font-size: 15;
+    margin-bottom: 10;
+}
+
+.input-form {
+    font-size: 16;
+    placeholder-color: #929294;
+    height: 50;
+}
+
+.btn-ingresar {
+    background: #ffd243;
+    color: #fff;
+    border-radius: 2;
+    font-size: 18;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 15;
+    font-weight: bold;
+}
+
+.fondo {
+    background-color: #f2f2f4;
+}
+
+.card-list {
+    background-color: #fff;
+    color: #4d4d4d;
+    margin: 15;
+}
+
+.card-list-layout {
+    padding: 20;
+}
+
+.card-list-layout .h1 {
+    margin-bottom: 15;
+}

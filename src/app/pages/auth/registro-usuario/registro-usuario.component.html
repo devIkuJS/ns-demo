@@ -1,0 +1,16 @@
+<GridLayout>
+    <StackLayout style="padding:70 10;">
+        <Label text="Bienvenido a Market" class="title-login"></Label>
+        <Label text="Registre sus datos" class="subtitle-login"></Label>
+        <StackLayout style="padding-top:40;">
+            <TextField [(ngModel)]="nombres" hint="Ingrese sus nombres" class="input-form">
+            </TextField>
+            <TextField [(ngModel)]="email" hint="Ingrese su correo" keyboardType="email" autocapitalizationType="none" class="input-form">
+            </TextField>
+            <TextField [(ngModel)]="password" hint="Ingrese su contraseña" secure="true" class="input-form">
+            </TextField>
+            <Button text="Registrar" class="btn-ingresar" marginTop="20" (tap)="registrarUsuario()"></Button>
+            <Label text="Ver términos y condiciones" style="text-align: center;padding-top: 20;color:#b6d4d4;" fontSize="14"></Label>
+        </StackLayout>
+    </StackLayout>
+</GridLayout>

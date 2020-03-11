@@ -1,0 +1,19 @@
+<GridLayout>
+    <StackLayout style="padding:100 10;">
+        <Label text="Bienvenido" class="title-login"></Label>
+        <StackLayout style="padding-top:50;">
+            <TextField [(ngModel)]="email" hint="Ingrese su correo" keyboardType="email" autocapitalizationType="none" class="input-form">
+            </TextField>
+            <TextField [(ngModel)]="password" hint="Ingrese su contraseña" secure="true" class="input-form">
+            </TextField>
+            <Label text="Olvido su contraseña?" class="label-forgot-password">
+            </Label>
+            <Button text="Ingresar" class="btn-ingresar " (tap)="login()"></Button>
+        </StackLayout>
+        <FlexboxLayout alignItems="center" style="padding-top: 40;">
+            <Label text="Si todavia no tiene una cuenta, " textWrap="true" fontSize="14">
+            </Label>
+            <Label text="Regístrese" nsRouterLink="/registro-usuario" fontSize="14" color="#b6d4d4"></Label>
+        </FlexboxLayout>
+    </StackLayout>
+</GridLayout>

@@ -1,0 +1,18 @@
+<GridLayout rows="*, 50">
+    <ng-content row="0"></ng-content>
+    <!-- Tabs-->
+    <FlexboxLayout row="1" class="bottom-bar-line">
+        <StackLayout width="25%" verticalAlignment="center" (tap)="onNavigate('/home/restaurants')">
+            <Image src="font://&#xf015;" stretch="none" class="fas" horizontalAlignment="center"></Image>
+        </StackLayout>
+        <StackLayout width="25%" verticalAlignment="center" (tap)="onNavigate('/home/contactos')">
+            <Image src="font://&#xf0c0;" stretch="none" class="fas" horizontalAlignment="center"></Image>
+        </StackLayout>
+        <StackLayout width="25%" verticalAlignment="center" (tap)="onNavigate('/home/favorite-restaurants')">
+            <Image src="font://&#xf004;" stretch="none" class="far" horizontalAlignment="center"></Image>
+        </StackLayout>
+        <StackLayout width="25%" verticalAlignment="center" (tap)="onNavigate('/home/perfil')">
+            <Image src="font://&#xf007;" stretch="none" class="fas" horizontalAlignment="center"></Image>
+        </StackLayout>
+    </FlexboxLayout>
+</GridLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "690924990575",
+    "firebase_url": "https://demons-93e7e.firebaseio.com",
+    "project_id": "demons-93e7e",
+    "storage_bucket": "demons-93e7e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690924990575:android:76ce0dff14e09289c45d9a",
+        "android_client_info": {
+          "package_name": "org.nativescript.nativescriptdemo2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690924990575-onv2s3ihqtkf2he7diqsmrl5b3dmv7kl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFx-vMWSgcpHZZ1ZPXsCTTT-tsGCztCZs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690924990575-onv2s3ihqtkf2he7diqsmrl5b3dmv7kl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,23 @@
+<ns-bottom-bar index="3">
+    <GridLayout rows="250, *">
+        <Image height="250" stretch="fill" src="https://images.pexels.com/photos/1833399/pexels-photo-1833399.jpeg?cs=srgb&dl=cafeteria-cliente-comprar-encimera-1833399.jpg&fm=jpg">
+        </Image>
+        <CardView margin="10" marginTop="-120" row="1" radius="10" ios:style="background-color: white;">
+            <StackLayout padding="15">
+                <Label text="Mi Perfil" fontSize="17" fontWeight="bold" padding="12"></Label>
+                <StackLayout>
+                    <Image [src]="perfil.avatar" width="100" borderRadius="100"></Image>
+                </StackLayout>
+                <StackLayout orientation="horizontal">
+                    <Label class="fas" text="&#xf007;" marginRight="20" verticalAlignment="center"></Label>
+                    <Label [text]="perfil.first_name" fontSize="14"></Label>
+                </StackLayout>
+                <StackLayout marginTop="5%" orientation="horizontal">
+                    <Label class="fas" text="&#xf0e0;" marginRight="20" verticalAlignment="center"></Label>
+                    <Label [text]="perfil.email" fontSize="14"></Label>
+                </StackLayout>
+                <Button (tap)="logout()" marginTop="10%" class="btn-logout" text="Cerrar Sesión"></Button>
+            </StackLayout>
+        </CardView>
+    </GridLayout>
+</ns-bottom-bar>
