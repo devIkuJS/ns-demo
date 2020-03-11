@@ -11,6 +11,19 @@ _El plugin personalizado tiene por nombre NsToast2
 
 ### Instalación 🔧
 
+Para usuarios de prueba :
+
+LOGIN USUARIO DE PRUEBA
+eve.holt@reqres.in
+cityslicka
+
+REGISTRO DE PRUEBA
+Brian Huamani
+eve.holt@reqres.in
+pistol
+
+
+
 _Para instalar el plugin ejecutar el comando:  tns plugin add nombre_del_plugin.tgz_
 
 _Luego crear un service de angular y colocar _
