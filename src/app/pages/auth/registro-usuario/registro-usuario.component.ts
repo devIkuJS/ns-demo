@@ -5,6 +5,7 @@ import { IndicatorService } from '../../../shared/indicator.service';
 import { ToastService } from '../../../shared/toast.service';
 import * as dialogs from "tns-core-modules/ui/dialogs";
 import { AuthService } from '../../../services/auth.service';
+import { ValidatorsService } from '../../../shared/validators.service';
 
 
 
@@ -15,15 +16,15 @@ import { AuthService } from '../../../services/auth.service';
 })
 export class RegistroUsuarioComponent implements OnInit {
 
-   nombres:string;
+  first_name:string;
    email:string;
    password:string;
    
 
   constructor(private page : Page , private _userService: AuthService , private router : RouterExtensions , private _indicatorService:IndicatorService , 
-    private _toastService: ToastService) { 
+    private _toastService: ToastService , private _validatorService: ValidatorsService) { 
     // Datos propocionados del API FAKE , Ver documentacion en  https://reqres.in/
-    this.nombres="";
+    this.first_name="";
     this.email="";
     this.password="";
     this.page.actionBarHidden = true;
@@ -38,23 +39,17 @@ export class RegistroUsuarioComponent implements OnInit {
   registrarUsuario(){
 
 
-    if(this.nombres == "" || this.nombres.length < 3 ){
+    if(!this._validatorService.isValidRegister(this.first_name, this.email, this.password)){
 
-      this._toastService.showToast("El nombre ingresado es inválido");
-
-    }else if (this.email == ""){
-
-      this._toastService.showToast("El correo ingresado es inválido");
-     
-    }else if (this.password == "" || this.password.length < 4){
-     
-      this._toastService.showToast("La contraseña ingresada es inválida");
+      this._toastService.showToast("Los datos ingresados son inválidos");
+      
+      return;
 
     }else{
 
       this._indicatorService.show('Cargando...');
 
-      let data = {
+      const data = {
         email: this.email , 
         password: this.password
       };

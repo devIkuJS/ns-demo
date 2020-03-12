@@ -15,14 +15,14 @@ export class AuthService {
   constructor(private http: HttpClient) { }
   
   
-  login(data) {
+  login(data : User) {
 
-   return this.http.post<User[]>(`${URL_API_USER}login`,  {headers: this.commonHeader() } ).pipe(retry(1));
+   return this.http.post<User[]>(`${URL_API_USER}login`, data,  {headers: this.commonHeader() } ).pipe(retry(1));
   } 
   
-  registro(data){
+  registro(data : User){
 
-    return this.http.post<User[]>(`${URL_API_USER}register`,  {headers: this.commonHeader() } ).pipe(retry(1));
+    return this.http.post<User[]>(`${URL_API_USER}register`, data, {headers: this.commonHeader() } ).pipe(retry(1));
 
   }
 

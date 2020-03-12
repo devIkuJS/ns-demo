@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpHandler, HttpRequest, HttpInterceptor} from '@angular/common/http';
+import { HttpHandler, HttpRequest, HttpInterceptor, HttpErrorResponse } from '@angular/common/http';
 import {throwError} from 'rxjs';
 import {catchError} from 'rxjs/internal/operators';
 
@@ -15,12 +15,12 @@ export class InterceptorService implements HttpInterceptor {
 
         console.log(error);
         let errorMessage = '';
-        if (error instanceof ErrorEvent) {
+        if (error instanceof HttpErrorResponse) {
           // client-side error
-          errorMessage = `Client-side error: ${error.error.message}`;
+          errorMessage = `Client-side error: ${error.error.error}`;
         } else {
           // backend error
-          errorMessage = `Server-side error: ${error.status} ${error.message}`;
+          errorMessage = `Server-side error: ${error.status} ${error.error.error}`;
         }
         
 
